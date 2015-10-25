@@ -5,7 +5,7 @@ MAINTAINER Ben Sampson <ben@myns.co>
 RUN apt-get update -y
 
 # Installs PHP5.6, some extensions and apcu.
-RUN apt-get install -y php5 php5-curl php5-intl php5-memcached curl wget git memcached sqlite
+RUN apt-get install -y php5 php5-curl php5-intl php5-memcached curl wget git memcached sqlite3
 
 # Installs PHPUnit
 RUN wget https://phar.phpunit.de/phpunit.phar 
