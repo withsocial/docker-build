@@ -16,7 +16,7 @@ RUN mv phpunit.phar /usr/local/bin/phpunit
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Pull in preset php.ini file
-RUN curl -L https://d.pr/n/lzCa/php56.ini
+RUN wget https://d.pr/n/lzCa/php56.ini
 RUN rm -r /etc/php5/cli/php.ini
 RUN cp php56.ini /etc/php5/cli/php.ini 
 
