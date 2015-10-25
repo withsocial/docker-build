@@ -1,5 +1,5 @@
 # Dockerfile for Laravel - php56 git sqlite composer phpunit
-FROM debian/latest
+FROM debian/jessie
 MAINTAINER Ben Sampson <ben@myns.co>
 
 RUN apt-get update -y
