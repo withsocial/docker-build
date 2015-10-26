@@ -5,7 +5,7 @@ MAINTAINER Ben Sampson <ben@myns.co>
 RUN apt-get update -y
 
 # Installs PHP 5.6 with extensions
-RUN apt-get install -y php-cli php5-curl php5-intl php5-memcached php5-sqlite curl git memcached
+RUN apt-get install -y php5-cli php5-curl php5-intl php5-memcached php5-sqlite curl git memcached
 
 # Installs Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
