@@ -18,5 +18,4 @@ RUN apt-get upgrade -y
 # Test build
 RUN php -v
 RUN git --version
-RUN phpunit --version
 RUN composer --version
