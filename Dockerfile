@@ -18,9 +18,6 @@ RUN apt-get install -y php7.0-fpm php7.0 php7.0-curl php7.0-intl php7.0-sqlite3 
 # Installs Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# Pull in preset php.ini file
-RUN curl -sS https://d.pr/n/lzCa/php56.ini -o /etc/php5/cli/php.ini
-
 RUN apt-get upgrade -y
 
 # Test build
