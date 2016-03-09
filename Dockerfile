@@ -13,7 +13,7 @@ RUN echo "Install dotdeb" \
 RUN apt-get update -y
 
 # Installs PHP/mods and software.
-RUN apt-get install -y php7.0-fpm php7.0 php7.0-curl php7.0-intl php7.0-sqlite3 curl git
+RUN apt-get install -y php7.0-fpm php7.0-cli php7.0-curl php7.0-intl php7.0-sqlite3 curl git
 
 # Installs Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
