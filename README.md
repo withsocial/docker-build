@@ -1,12 +1,39 @@
 ![](https://withsocial.com/assets/img/logo/withsocial.black.black.72ppi.png)
 
-# WithSocial Build setup on Docker
+# WithSocial Laravel CI Builds
 
-Start test building your applications with PHP 7, Git, Composer and SQLite.
+Run CI builds on your php/laravel applications with this dockerfile which includes everything you need for standard/advanced Laravel tests. PHP 7, Git, Composer, SQLite and any packages you need.
 
-I believe there's easier ways to install the required software but for now this works and we have full control over what it does.
-Pull requests are welcome and you can use this for your project by pulling in this from the Docker website.
+### Example usage with GitLab's `.gitlab-ci.yml`
+```yml
+# PHP 7.0
+test:php7.0:
+  image: bashy/docker-build:php70
+  script:
+  - vendor/bin/parallel-lint --exclude vendor --exclude _ide_helper.php .
+  - vendor/bin/phpunit
+  - vendor/bin/phpmd app/ text phpmd.xml
+  - vendor/bin/phpcs --standard=psr2 app
 
-https://hub.docker.com/r/bashy/docker-build/
+# PHP 7.1
+test:php7.1:
+  image: bashy/docker-build:latest
+  script:
+  - vendor/bin/parallel-lint --exclude vendor --exclude _ide_helper.php .
+  - vendor/bin/phpunit
+  - vendor/bin/phpmd app/ text phpmd.xml
+  - vendor/bin/phpcs --standard=psr2 app
+```
 
-Please star or comment if you used it
+### Info 
+I believe there's easier ways to install the services separately but for now this works and we have full control over what it does.
+
+### Contributing
+Pull requests are welcome but please explain what it fixes/solves/changes clearly for me.
+
+
+
+Docket Hub Link: https://hub.docker.com/r/bashy/docker-build/
+
+
+Thanks!
