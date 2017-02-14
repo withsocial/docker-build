@@ -4,6 +4,7 @@ FROM debian:jessie
 MAINTAINER Ben Sampson <ben@myns.co>
 
 # Install some base packages
+RUN apt-get update -y
 RUN apt-get install -y apt-transport-https ca-certificates curl git zip unzip
 
 # Download and save apt PGP for php
