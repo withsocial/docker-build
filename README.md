@@ -2,7 +2,7 @@
 
 # WithSocial Laravel CI Builds
 
-Run CI builds on your php/laravel applications with this dockerfile which includes everything you need for standard/advanced Laravel tests. PHP 7, Git, Composer, SQLite and any packages you need.
+Run CI builds on your php/laravel applications with this repo which includes everything you need for standard/advanced Laravel tests. PHP 7.0-latest, Git, Composer, SQLite and any packages you need.
 
 ### Example usage with GitLab's `.gitlab-ci.yml`
 ```yml
@@ -17,13 +17,24 @@ test:php7.0:
 
 # PHP 7.1
 test:php7.1:
-  image: bashy/docker-build:latest
+  image: bashy/docker-build:php71
   script:
   - vendor/bin/parallel-lint --exclude vendor --exclude _ide_helper.php .
   - vendor/bin/phpunit
   - vendor/bin/phpmd app/ text phpmd.xml
   - vendor/bin/phpcs --standard=psr2 app
 ```
+
+### If you want to use the latest stable PHP version, just use :latest
+```
+# PHP Latest
+test:php-latest:
+  image: bashy/docker-build:latest
+  script:
+  - vendor/bin/parallel-lint --exclude vendor --exclude _ide_helper.php .
+  - vendor/bin/phpunit
+  - vendor/bin/phpmd app/ text phpmd.xml
+  - vendor/bin/phpcs --standard=psr2 app
 
 ### Info 
 I believe there's easier ways to install the services separately but for now this works and we have full control over what it does.
