@@ -26,7 +26,7 @@ test:php7.1:
 ```
 
 ### If you want to use the latest stable PHP version, just use :latest
-```
+```yml
 # PHP Latest
 test:php-latest:
   image: bashy/docker-build:latest
