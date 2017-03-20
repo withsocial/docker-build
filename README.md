@@ -35,6 +35,7 @@ test:php-latest:
   - vendor/bin/phpunit
   - vendor/bin/phpmd app/ text phpmd.xml
   - vendor/bin/phpcs --standard=psr2 app
+```
 
 ### Info 
 I believe there's easier ways to install the services separately but for now this works and we have full control over what it does.
