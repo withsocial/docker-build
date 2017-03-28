@@ -11,7 +11,8 @@ RUN apt-get update && \
     curl \
     git \
     zip \
-    unzip
+    unzip \
+    sudo
 
 # Download and save apt PGP for php
 ADD https://packages.sury.org/php/apt.gpg /etc/apt/trusted.gpg.d/php.gpg
@@ -32,8 +33,7 @@ RUN apt-get update && \
     php7.1-sqlite3 \
     php7.1-mysql \
     php7.1-pgsql \
-    rubygems \
-    sudo
+    rubygems
 
 # Install Composer
 RUN php -r "readfile('https://getcomposer.org/installer');" > composer-setup.php && \
