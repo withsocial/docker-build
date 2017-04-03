@@ -36,7 +36,7 @@ RUN php -r "readfile('https://getcomposer.org/installer');" > composer-setup.php
     php composer-setup.php --install-dir=/usr/local/bin --filename=composer && \
     php -r "unlink('composer-setup.php');"
 
-# Test build (is this good?)
+# Is this good?
 RUN php -v && \
     git --version && \
     composer --version
