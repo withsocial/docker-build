@@ -1,6 +1,6 @@
 # Dockerfile for WithSocial.com builds and any other PHP/Composer based project
 
-FROM debian:jessie
+FROM debian:stretch
 MAINTAINER Ben Sampson <ben@myns.co>
 
 
@@ -15,7 +15,7 @@ RUN apt-get update && \
     sudo
 
 ADD https://packages.sury.org/php/apt.gpg /etc/apt/trusted.gpg.d/php.gpg
-RUN echo "deb https://packages.sury.org/php/ jessie main" > /etc/apt/sources.list.d/php.list
+RUN echo "deb https://packages.sury.org/php/ stretch main" > /etc/apt/sources.list.d/php.list
 
 RUN apt-get update && \
     apt-get install -y \
