@@ -18,7 +18,7 @@ RUN apt-get update -yqq && \
 RUN docker-php-ext-install \
     mbstring \
     pdo_mysql \
-    sqlite3 \
+    pdo_sqlite \
     curl \
     json \
     intl \
