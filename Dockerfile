@@ -13,6 +13,7 @@ RUN apt-get update -yqq && \
     zip \
     unzip \
     sudo \
+    sqlite3 \
     rubygems
 
 RUN docker-php-ext-install \
