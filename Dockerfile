@@ -19,17 +19,17 @@ RUN echo "deb https://packages.sury.org/php/ jessie main" > /etc/apt/sources.lis
 
 RUN apt-get update && \
     apt-get install -y \
-    php7.1-fpm \
-    php7.1-cli \
-    php7.1-mbstring \
-    php7.1-xml \
-    php7.1-zip \
-    php7.1-curl \
-    php7.1-intl \
-    php7.1-gd \
-    php7.1-sqlite3 \
-    php7.1-mysql \
-    php7.1-pgsql \
+    php7.2-fpm \
+    php7.2-cli \
+    php7.2-mbstring \
+    php7.2-xml \
+    php7.2-zip \
+    php7.2-curl \
+    php7.2-intl \
+    php7.2-gd \
+    php7.2-sqlite3 \
+    php7.2-mysql \
+    php7.2-pgsql \
     rubygems
 
 RUN php -r "readfile('https://getcomposer.org/installer');" > composer-setup.php && \
