@@ -1,6 +1,6 @@
 # Dockerfile for WithSocial.com builds and any other PHP/Composer based project
 
-FROM debian:jessie
+FROM debian:stretch
 MAINTAINER Ben Sampson <ben@myns.co>
 
 
