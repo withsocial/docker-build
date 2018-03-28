@@ -4,7 +4,7 @@
 
 Run CI builds on your php/laravel applications with this repo which includes everything you need for standard/advanced Laravel tests. PHP 7.0-latest, Git, Composer, SQLite and any packages you need.
 
-# Available PHP Versions
+### Available PHP Versions
 * 7.0
 * 7.1
 * 7.2
