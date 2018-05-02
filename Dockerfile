@@ -38,6 +38,9 @@ RUN php -r "readfile('https://getcomposer.org/installer');" > composer-setup.php
     php composer-setup.php --install-dir=/usr/local/bin --filename=composer && \
     php -r "unlink('composer-setup.php');"
 
+# Install Laravel Envoy
+RUN composer global require "laravel/envoy=~1.0"
+
 # Is this good?
 RUN php -v && \
     git --version && \
