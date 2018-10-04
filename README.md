@@ -8,6 +8,7 @@ Run CI builds on your php/laravel applications with this repo which includes eve
 * 7.0
 * 7.1
 * 7.2
+* 7.3
 
 ### Example usage with GitLab's `.gitlab-ci.yml`
 ```yml
