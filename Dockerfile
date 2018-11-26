@@ -21,6 +21,7 @@ RUN chmod 664 /etc/apt/trusted.gpg.d/php.gpg
 
 RUN apt-get update && \
     apt-get install -y \
+    php7.2-bcmath \
     php7.2-fpm \
     php7.2-cli \
     php7.2-mbstring \
