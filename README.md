@@ -1,4 +1,4 @@
-# WithSocial Laravel CI Builds
+# Laravel CI Builds
 
 Run CI builds on your php/laravel applications with this repo which includes everything you need for standard/advanced Laravel tests. Ranging from PHP 7.2 to the latest version + Git, Composer, SQLite and any packages you need.
 
