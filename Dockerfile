@@ -1,7 +1,7 @@
 # Dockerfile for WithSocial.com builds and any other PHP/Composer based project
 
-FROM debian:stretch
-MAINTAINER Ben Sampson <ben@myns.co>
+FROM debian:buster
+MAINTAINER Ben Sampson
 
 
 RUN apt-get update && \
@@ -21,18 +21,18 @@ RUN chmod 664 /etc/apt/trusted.gpg.d/php.gpg
 
 RUN apt-get update && \
     apt-get install -y \
-    php7.3-bcmath \
-    php7.3-fpm \
-    php7.3-cli \
-    php7.3-mbstring \
-    php7.3-xml \
-    php7.3-zip \
-    php7.3-curl \
-    php7.3-intl \
-    php7.3-gd \
-    php7.3-sqlite3 \
-    php7.3-mysql \
-    php7.3-pgsql \
+    php7.4-bcmath \
+    php7.4-fpm \
+    php7.4-cli \
+    php7.4-mbstring \
+    php7.4-xml \
+    php7.4-zip \
+    php7.4-curl \
+    php7.4-intl \
+    php7.4-gd \
+    php7.4-sqlite3 \
+    php7.4-mysql \
+    php7.4-pgsql \
     rubygems
 
 RUN php -r "readfile('https://getcomposer.org/installer');" > composer-setup.php && \
