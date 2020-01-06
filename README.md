@@ -1,29 +1,27 @@
-![](https://withsocial.com/assets/img/logo/withsocial.black.black.72ppi.png)
-
 # WithSocial Laravel CI Builds
 
-Run CI builds on your php/laravel applications with this repo which includes everything you need for standard/advanced Laravel tests. PHP 7.0-latest, Git, Composer, SQLite and any packages you need.
+Run CI builds on your php/laravel applications with this repo which includes everything you need for standard/advanced Laravel tests. Ranging from PHP 7.2 to the latest version + Git, Composer, SQLite and any packages you need.
 
 ### Available PHP Versions
-* 7.0
-* 7.1
 * 7.2
 * 7.3
+* 7.4
+* latest
 
 ### Example usage with GitLab's `.gitlab-ci.yml`
 ```yml
-# PHP 7.1
-test:php7.1:
-  image: bashy/docker-build:php71
+# PHP 7.3
+test:php7.3:
+  image: bashy/docker-build:php73
   script:
   - vendor/bin/parallel-lint --exclude vendor --exclude _ide_helper.php .
   - vendor/bin/phpunit
   - vendor/bin/phpmd app/ text phpmd.xml
   - vendor/bin/phpcs --standard=psr2 app
 
-# PHP 7.2
-test:php7.2:
-  image: bashy/docker-build:php72
+# PHP 7.4
+test:php7.4:
+  image: bashy/docker-build:php74
   script:
   - vendor/bin/parallel-lint --exclude vendor --exclude _ide_helper.php .
   - vendor/bin/phpunit
