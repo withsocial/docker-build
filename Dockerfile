@@ -21,18 +21,18 @@ RUN chmod 664 /etc/apt/trusted.gpg.d/php.gpg
 
 RUN apt-get update && \
     apt-get install -y \
-    php8.0-bcmath \
-    php8.0-fpm \
-    php8.0-cli \
-    php8.0-mbstring \
-    php8.0-xml \
-    php8.0-zip \
-    php8.0-curl \
-    php8.0-intl \
-    php8.0-gd \
-    php8.0-sqlite3 \
-    php8.0-mysql \
-    php8.0-pgsql \
+    php8.1-bcmath \
+    php8.1-fpm \
+    php8.1-cli \
+    php8.1-mbstring \
+    php8.1-xml \
+    php8.1-zip \
+    php8.1-curl \
+    php8.1-intl \
+    php8.1-gd \
+    php8.1-sqlite3 \
+    php8.1-mysql \
+    php8.1-pgsql \
     rubygems
 
 RUN php -r "readfile('https://getcomposer.org/installer');" > composer-setup.php && \
